@@ -380,6 +380,23 @@ button:not(:disabled),
   flex: 0 0 auto;
   width: 66.66666667%;
 }
+@media (min-width: 358px) {
+ .text-custom{
+  font-size: 4rem;
+ }
+ .carrito-btn{
+  width: 35px;
+ }
+  .shop-guitar  {
+    display: block;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-name: animarImagenLeft;
+    
+  }
+}
+
 @media (min-width: 768px) {
   .col-md-3 {
     flex: 0 0 auto;
@@ -745,6 +762,7 @@ button:not(:disabled),
   .text-md-start {
     text-align: left !important;
   }
+
 }
 @media (min-width: 1200px) {
   .fs-1 {
@@ -796,7 +814,7 @@ button:not(:disabled),
 }
 
 
-@media (min-width: 992px) {
+@media (min-width: 792px) {
   .header .header-guitarra {
     display: block;
     position: absolute;
@@ -808,15 +826,7 @@ button:not(:disabled),
     animation-name: animarImagen;
     z-index: 10;
   }
-
- .shop-guitar  {
-    display: block;
-    animation-duration: 5s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in-out;
-    animation-name: animarImagenLeft;
-    
-  } 
+ 
 
 
 }
