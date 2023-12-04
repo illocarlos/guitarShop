@@ -1,14 +1,31 @@
 @charset "UTF-8";
-.fw-black {
+.fw-black,.text-custom{
   font-weight: 900;
+  color: orange !important;
+}
+ .text-custom{
+  font-size: 6rem;
 }
 
 .btn-dark {
   text-transform: uppercase;
 }
+.bg-custom-me{
+  
+  background-color: orange !important;
+}
+.bg-custom-me:hover{
+  background-color:rgb(181, 120, 6)!important
+}
+.carrito-btn{
+  border: none;
+  background-color: rgba(255, 166, 0, 0.822);
+  width: 50px;
+  border-radius: 30%;
+}
 
 .carrito {
-  background-color: transparent;
+  cursor: pointer;
   border: none;
   max-width: 2rem;
   position: relative;
@@ -21,6 +38,7 @@
 }
 
 .carrito:hover #carrito {
+ 
   display: block;
   background-color: white;
   padding: 10px;
@@ -670,6 +688,7 @@ button:not(:disabled),
 
 .fw-bold {
   font-weight: 700 !important;
+  color: orange !important;
 }
 
 .text-end {
@@ -775,10 +794,7 @@ button:not(:disabled),
 .header .header-guitarra  {
   display: none;
 }
-.guitar-rigth ,
- .guitar-rigth-block-two {
- display: none;
-}
+
 
 @media (min-width: 992px) {
   .header .header-guitarra {
@@ -793,93 +809,14 @@ button:not(:disabled),
     z-index: 10;
   }
 
-  .guitar-rigth{
+ .shop-guitar  {
     display: block;
-    right: -100px;
-    bottom: 0;
-    animation-duration: 3s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in-out;
-    animation-name: animarImagen;
-    z-index: 10;
-  }
-.guitar-rigth-block-two{
-    display: block;
-    right: 0;
-    bottom: 0;
     animation-duration: 5s;
     animation-delay: 0s;
     animation-timing-function: ease-in-out;
     animation-name: animarImagenLeft;
-    z-index: 10;
-  }
-.guitar-rigth-block-three{
-    display: block;
-    right: 0;
-    bottom: 0;
-    animation-duration: 7s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in-out;
-    animation-name: animarImagen;
-    z-index: 10;
-  }
-.guitar-rigth-block-four{
-    display: block;
-    right: 0;
-    bottom: 0;
-    animation-duration: 9s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in-out;
-    animation-name: animarImagenLeft;
-    z-index: 10;
-  }
-
-
-}
-
-@media (min-width: 492px) {
- 
-
-  .guitar-rigth{
-    display: block;
-    right: -100px;
-    bottom: 0;
-    animation-duration: 3s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in-out;
-    animation-name: animarImagen;
-    z-index: 10;
-  }
-.guitar-rigth-block-two{
-    display: block;
-    right: 0;
-    bottom: 0;
-    animation-duration: 5s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in-out;
-    animation-name: animarImagenLeft;
-    z-index: 10;
-  }
-.guitar-rigth-block-three{
-    display: block;
-    right: 0;
-    bottom: 0;
-    animation-duration: 7s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in-out;
-    animation-name: animarImagen;
-    z-index: 10;
-  }
-.guitar-rigth-block-four{
-    display: block;
-    right: 0;
-    bottom: 0;
-    animation-duration: 9s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in-out;
-    animation-name: animarImagenLeft;
-    z-index: 10;
-  }
+    
+  } 
 
 
 }
