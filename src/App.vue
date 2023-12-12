@@ -102,8 +102,13 @@ const decrement = (id) => {
 const deleted = (id) => {
     // usamos filter y filtramos la tienda y le preguntamos si la id de ese elemento 
     // es difernte que la id que le pasamos y si es diferente se quedan en la tienda y si son iguales se eliminan
+    buy.value = buy.value.filter(elem => elem.id !== id)
+    if (buy.value.length === 0) {
+     countGuitar.value=0
+}
+
+    decrementBuy()
     
-  buy.value=buy.value.filter(elem=>elem.id!==id)
 }
 // aqui dejamos a 0 el carrito eliminando todo lo que tiene dentro
 // le pasamos la buy que viene como prop del componente hijo modificiada
