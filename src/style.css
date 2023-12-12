@@ -17,12 +17,7 @@
 .bg-custom-me:hover{
   background-color:rgb(181, 120, 6)!important
 }
-.carrito-btn{
-  border: none;
-  background-color: rgba(255, 166, 0, 0.822);
-  width: 50px;
-  border-radius: 30%;
-}
+
 
 .carrito {
   cursor: pointer;
@@ -329,6 +324,7 @@ button:not(:disabled),
 }
 
 .img-fluid {
+  cursor: pointer;
   max-width: 100%;
   height: auto;
 }
@@ -384,9 +380,7 @@ button:not(:disabled),
  .text-custom{
   font-size: 4rem;
  }
- .carrito-btn{
-  width: 35px;
- }
+
   .shop-guitar  {
     display: block;
     animation-duration: 5s;
@@ -556,53 +550,6 @@ button:not(:disabled),
   list-style: none;
 }
 
-@keyframes progress-bar-stripes {
-  0% {
-    background-position-x: 1rem;
-  }
-}
-
-/* rtl:begin:ignore */
-
-/* rtl:end:ignore */
-
-/* rtl:begin:ignore */
-
-/* rtl:end:ignore */
-
-/* rtl:begin:ignore */
-
-/* rtl:end:ignore */
-
-/* rtl:begin:ignore */
-
-/* rtl:end:ignore */
-
-/* rtl:options: {
-  "autoRename": true,
-  "stringMap":[ {
-    "name"    : "prev-next",
-    "search"  : "prev",
-    "replace" : "next"
-  } ]
-} */
-
-@keyframes spinner-border {
-  to {
-    transform: rotate(360deg) /* rtl:ignore */;
-  }
-}
-
-@keyframes spinner-grow {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
 @keyframes placeholder-glow {
   50% {
     opacity: 0.2;
@@ -719,7 +666,22 @@ button:not(:disabled),
 .text-uppercase {
   text-transform: uppercase !important;
 }
+.divCoun{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  background-color: red;
+  z-index: 100;
+  color: white;
+  border-radius: 2rem;
+  width: 1.2rem;
+  height: 1.2rem;
 
+}
+.divCoun p{
+  font-size: small;
+
+}
 /* rtl:begin:remove */
 
 /* rtl:end:remove */

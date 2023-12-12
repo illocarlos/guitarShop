@@ -1,8 +1,8 @@
-       
-       
+     
 <script setup>
 import { computed } from 'vue'
-
+// definimos las props tal que asi y debemos usar el type de el que sea esa prop que este en el padre
+//se suele poner arriba de los script
 const props = defineProps({
     buy: {
         type: Array,
@@ -11,11 +11,32 @@ const props = defineProps({
     guitar: {
         type: Object,
         required:true
+    },
+    countGuitar: {
+        type: Number,
+        required:true,
     }
 })
-defineEmits(['increment', 'decrement', 'add-buy', 'deleted', 'deleted-all']) 
+// con defineEmits llamamos eventos pasados por el padre y
+//  debemos activarlos con @click="$emit(nombreevento,->le pasamos una prop para usarla en dicho evento <-)"
+defineEmits(['increment', 'decrement', 'add-buy', 'deleted', 'deleted-all','increment-buy' ]) 
 
+// defineEmit y defineProp son palabra reservada de vue pero no son importadas como la mayoria
+
+
+// para usar computed es igual que un evento o funcion normal pero hay que rodear toda la funcion con la palabra
+// computed y coge un call back
+//siempre usamos al final un return por que es lo que se va a monstrar en pantalla
+//este computed lo usamos para calcular el total de todo los propductos que queremos comprar
+//
 const total = computed(() => {
+    //usamos buy o carrito que es lo que vamos a iterar y debemos llamarlo con prop ya que no esta declarado aqui
+    //si no en el componente padre
+    // usamor reduces un array metodo que obligatoriamente tiene que coger dos parametros(total y elem)
+    //aqui usamos un total que lo iniciamos en 0 como aparece al final del metodo
+    //y un elem que es cada elemento del carrito (buy)
+    //la logica es total es 0 de primera y  vamos contando la cantidad de elementos por el precio 
+    //y se la sumamos al total tantas veces como elementos tengamos
     return props.buy.reduce((total, elem) =>  total + (elem.count * elem.precio),0)
      })
      
@@ -32,12 +53,14 @@ const total = computed(() => {
                           </a>
                       </div>
                       <nav class="col-md-6 a mt-5 d-flex align-items-start justify-content-end">
+                        <div class="divCoun" >
+                            <p>{{ countGuitar }}</p>
+                        </div>
                           <div 
                               class="carrito"
                           >
-                          <button class="carrito-btn">
                               <img class="img-fluid" src="/img/carrito.png" alt="imagen carrito" />
-                            </button>
+                     
                               <div id="carrito" class="bg-white p-3">
                                   <p v-if="buy.length===0" class="text-center">
                                     El carrito esta vacio
@@ -105,8 +128,7 @@ const total = computed(() => {
                               </div>
                           </div>
                       </nav>
-                  </div><!--.row-->
-
+                  </div>
                   <div class="row mt-5">
                       <div class="col-md-6 text-center text-md-start pt-5">
                           <h1 class="display-2 fw-bold">Modelo {{ guitar.nombre }}</h1>
@@ -120,8 +142,6 @@ const total = computed(() => {
                       </div>
                   </div>
               </div>
-    <!-- -------- -->
-              <img class="header-guitarra" src="/img/header_guitarra.png" alt="imagen header">
-              <!-- ------------- -->
+                        <img class="header-guitarra" src="/img/header_guitarra.png" alt="imagen header">
           </header>
 </template>
